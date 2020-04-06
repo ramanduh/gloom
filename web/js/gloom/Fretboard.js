@@ -14,7 +14,7 @@
     }
 
     init(callback) {
-      Snap.load("./img/fretboard.svg", (loadedFragment) => {
+      Snap.load("https://cdn.jsdelivr.net/gh/ramanduh/gloom@master/web/img/fretboard.svg", (loadedFragment) => {
         var fret, i, id_elem, j, ref, string;
         for (string = i = 1; i <= 6; string = ++i) {
           for (fret = j = 0, ref = this.fretnote.nb_frets; 0 <= ref ? j <= ref : j >= ref; fret = 0 <= ref ? ++j : --j) {
