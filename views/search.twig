@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gloom</title>
+
+    <!-- bootsrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/custom.css" rel="stylesheet">
+    <script src="../js/util/jquery-1.10.2.js"></script>
+    <script src="../js/util/jquery-ui.js"></script>
+    <script src="../js/util/datatables.min.js"></script>
+    <!-- Bootstrap plugin -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    {{ include("search-song.twig") }}
+    <script type="javascript">
+    $(document).ready(function() {
+        alert('songtable')
+            $('#song-table').DataTable();
+
+    } );
+    </script>
+
+  </body>
+</html>
