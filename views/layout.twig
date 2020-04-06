@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gloom</title>
+
+    <!-- styles -->
+    <link href="css/loader.css" rel="stylesheet">
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="./css/bootstrap-custom.css" rel="stylesheet">
+    <!-- utils -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/3.2.0/async.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/javascript-state-machine@2.4.0/state-machine.min.js" type="text/javascript"></script>
+    <!-- shim -->
+    <script src="./inc/shim/Base64binary.js" type="text/javascript"></script>
+    <!-- jasmid package -->
+    <script src="./inc/jasmid/stream.js"></script>
+    <script src="./inc/jasmid/midifile.js"></script>
+    <script src="./inc/jasmid/replayer.js"></script>
+    <!-- midi.js package -->
+    <script src="./js/midi/audioDetect.js" type="text/javascript"></script>
+    <script src="./js/midi/gm.js" type="text/javascript"></script>
+    <script src="./js/midi/loader.js" type="text/javascript"></script>
+    <script src="./js/midi/plugin.webaudio.js" type="text/javascript"></script>
+    <script src="./js/midi/player.js" type="text/javascript"></script>
+    <!-- utils -->
+    <script src="./js/util/dom_request_xhr.js" type="text/javascript"></script>
+    <!-- jquery and snap svg-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./js/util/snap.svg.js"></script>
+    <!-- gloom -->
+    <script src="./js/gloom/PlayerWidget.js" type="text/javascript"></script>
+    <script src="./js/gloom/Gloom.js" type="text/javascript"></script>
+    <script src="./js/gloom/FretNote.js" type="text/javascript"></script>
+    <script src="./js/gloom/Fretboard.js" type="text/javascript"></script>
+    <script src="./js/gloom/Tablature.js" type="text/javascript"></script>
+    <script src="./js/gloom/TechnicalNotes.js" type="text/javascript"></script>
+    <!-- Bootstrap plugin -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+  </div>
+
+  <div class="container">
+    <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                Gloom
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Language<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    <h1>Crying in the Rain - The Everly Brothers</h1>
+
+    <div id="canvas"></div>
+    <svg id="svg" width="700px"></svg>
+    <div id="fretboard"></div>
+
+    <!-- Player -->
+    <div id="player" class="btn-group" role="group" aria-label="...">
+        <div class="player-progress-container">
+            <div class="player-progress-bar-container">
+                <span class="player-progress-bar-total">
+                    <span class="player-progress-bar"></span>
+                </span>
+            </div>
+            <span class="player-progress-text"></span>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default btn-sm player-play">
+                <span class="glyphicon glyphicon-play"  aria-hidden="true"></span> Play
+            </button>
+            <button type="button" class="btn btn-default btn-sm player-pause" style="display:none;">
+                <span class="glyphicon glyphicon-pause"  aria-hidden="true"></span> Pause
+            </button>
+            <button type="button" class="btn btn-default btn-sm player-stop">
+                <span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop
+            </button>
+        </div>
+    </div>
+
+    </div> <!-- /container -->
+
+    <script src="./js/gloom/Main.js" type="text/javascript"></script>
+
+  </body>
+</html>
