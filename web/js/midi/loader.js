@@ -24,10 +24,7 @@ MIDI.Player = MIDI.Player || {};
 
 	root.DEBUG = true;
 	root.USE_XHR = true;
-	// root.soundfontUrl = './soundfont/';
-	// root.soundfontUrl = 'https://gleitz.github.io/midi-js-soundfonts/FluidR3_GM/';
-	// root.soundfontUrl = 'https://gleitz.github.io/midi-js-soundfonts/FatBoy/';
-	root.soundfontUrl = 'https://gleitz.github.io/midi-js-soundfonts/MusyngKite/';
+	root.soundfontUrl = 'https://cdn.jsdelivr.net/gh/gleitz/midi-js-soundfonts@ea68d85ed9f059802bc8519edd57e7c3c67567f8/FatBoy/';
 
 	/*
 		MIDI.loadPlugin({
